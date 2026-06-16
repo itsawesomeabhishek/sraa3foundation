@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Header.css';
 
 export default function Header({ onDonateClick }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -39,10 +48,10 @@ export default function Header({ onDonateClick }) {
       </div>
 
       {/* NAVBAR */}
-      <nav className="navbar">
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-inner">
           <a href="#home" className="logo">
-            <img src="/logo.png" alt="SRAA3 Foundation" style={{ height: '46px', display: 'block' }} />
+            <img src="/logo.png" alt="SRAA3 Foundation" />
           </a>
           <div className="nav-links">
             <a href="#home" className="active">Home</a>

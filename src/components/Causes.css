@@ -1,0 +1,120 @@
+.causes-section {
+  background: var(--light);
+  padding: 80px 24px;
+}
+
+.causes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.cause-card {
+  background: var(--white);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-align: left;
+}
+
+.cause-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.cause-ph {
+  height: 200px;
+  background: linear-gradient(135deg, var(--navy) 0%, #2d5a9e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.cause-ph-img {
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cause-card:hover .cause-ph-img {
+  transform: scale(1.06);
+}
+
+.cause-ph.g2 {
+  background: linear-gradient(135deg, #0d5c2b 0%, var(--green) 100%);
+}
+
+.cause-ph.g3 {
+  background: linear-gradient(135deg, #6b2b0d 0%, #c05c1e 100%);
+}
+
+.cause-ph svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.3;
+  fill: #fff;
+}
+
+.cause-body {
+  padding: 22px;
+}
+
+.cause-tag {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+.cause-body h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.cause-body p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.cause-progress {
+  margin-bottom: 14px;
+}
+
+.cause-progress label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  height: 7px;
+  background: #dde4f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 10px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cause-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}

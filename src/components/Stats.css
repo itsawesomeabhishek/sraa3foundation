@@ -1,0 +1,37 @@
+.stats-section {
+  background: var(--white);
+  padding: 60px 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-box {
+  padding: 30px 20px;
+}
+
+.stat-box .num {
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.stat-box .lbl {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 12px;
+}
+
+.stat-divider {
+  width: 40px;
+  height: 3px;
+  background: var(--green);
+  margin: 10px auto 0;
+}

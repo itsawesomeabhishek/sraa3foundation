@@ -1,0 +1,124 @@
+.blog-section {
+  background: var(--light);
+  padding: 80px 24px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.blog-card {
+  background: var(--white);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-align: left;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.blog-ph {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-ph img {
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.blog-card:hover .blog-ph img {
+  transform: scale(1.06);
+}
+
+.blog-ph.b1 {
+  background: linear-gradient(135deg, var(--navy) 0%, #2d5a9e 100%);
+}
+
+.blog-ph.b2 {
+  background: linear-gradient(135deg, #0d5c2b 0%, var(--green) 100%);
+}
+
+.blog-ph.b3 {
+  background: linear-gradient(135deg, #6b2b0d 0%, #c05c1e 100%);
+}
+
+.blog-ph svg {
+  width: 56px;
+  height: 56px;
+  opacity: 0.25;
+  fill: #fff;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px 0;
+}
+
+.blog-cat {
+  background: var(--light);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.blog-date {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.blog-body {
+  padding: 12px 20px 20px;
+}
+
+.blog-body h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.blog-body p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green);
+  font-weight: 800;
+  font-size: 13px;
+  margin-top: 12px;
+  transition: gap 0.2s;
+}
+
+.read-more:hover {
+  gap: 10px;
+}
+
+.read-more svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--green);
+  fill: none;
+}

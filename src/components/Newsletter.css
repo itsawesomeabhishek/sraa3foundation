@@ -1,0 +1,77 @@
+.newsletter-section {
+  background: var(--white);
+  padding: 80px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.newsletter-inner {
+  max-width: 800px !important;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-content h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(26px, 3.5vw, 38px);
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.newsletter-content p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.nl-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .nl-form {
+    flex-direction: column;
+  }
+}
+
+.nl-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.nl-form input:focus {
+  border-color: var(--green);
+}
+
+.nl-form button {
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.nl-form button:hover {
+  background: var(--green);
+  transform: translateY(-1px);
+}
+
+.newsletter-success {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px;
+}

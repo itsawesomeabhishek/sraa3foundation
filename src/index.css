@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Palette */
+  --navy: #000000;
+  --navy2: #121212;
+  --green: #20bb5f;
+  --green2: #34f181;
+  --light: #f0ecec;
+  --white: #ffffff;
+  --text: #333333;
+  --muted: #666666;
+  --border: #dde4f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* SECTION SHARED */
+section {
+  padding: 80px 24px;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(26px, 3vw, 40px);
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.section-title em {
+  font-style: normal;
+  color: var(--green);
+}
+
+.section-sub {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center .section-sub {
+  margin: 0 auto;
+}
+
+/* Shared buttons */
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background: var(--green);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 14px;
+  transition: gap 0.2s;
+}
+
+.btn-ghost:hover {
+  gap: 10px;
+}
+
+.btn-ghost svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--green);
+  fill: none;
+}
